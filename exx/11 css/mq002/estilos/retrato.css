@@ -1,3 +1,10 @@
 @charset "UTF-8";
 
 /* cinfiguraçoes para aparelhos em pé */
+
+body {
+    background-color:#0B24FE;
+    background-image: url("../imagens/cev-portrait.jpg");
+  
+
+}

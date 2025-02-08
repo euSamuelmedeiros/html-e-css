@@ -1,3 +1,10 @@
 @charset "UTF-8";
 
 /* configuraçoes para aparelhos deitados */
+
+body {
+    background-color:#0B24FE;
+    background-image: url("../imagens/cev-landscape.jpg");
+    background-position: right center;
+
+}
