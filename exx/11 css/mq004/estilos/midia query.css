@@ -2,3 +2,57 @@
 
 /* todas as demais midias*/
 
+/* typical device Breakpoint 
+--------------------------------
+celular: de 600px ate 768
+tablet: 768 ate 1024
+desktop: 1440px
+grandes telas: acima de 1920px
+*/
+
+@media print { /* impressora */
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) { /* tablet */
+    body {
+        background-image: url("../imagens/back-tablet.jpg");
+    }
+    
+#fone {display: none;}
+#tab {display: block;}
+#impre {display: none;}
+#desk {display: none;}
+#tv {display: none;}
+}
+
+
+
+@media screen and (min-width: 992px) and (max-width: 1200px ) { /* desktop */
+    body {
+        background-image: url("../imagens/back-pc.jpg");
+    }
+
+    
+#fone {display: none;}
+#tab {display: none;}
+#impre {display: none;}
+#desk {display: block;}
+#tv {display: none;}
+    
+}
+
+@media screen and (min-width: 1200px) { /* grandes telas */
+    body { background-image: url("../imagens/back-tv.jpg");
+
+    }
+ 
+#fone {display: none;}
+#tab {display: none;}
+#impre {display: none;}
+#desk {display: none;}
+#tv {display: block;}
+}
+
+
+
