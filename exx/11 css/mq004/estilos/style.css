@@ -1,0 +1,54 @@
+@charset  "UTF-8";
+
+
+/* verdao mobile first */
+
+    * {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1em;
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+
+    }
+
+    html, body {
+        width: 100vw;
+        height: 100vh;
+    }
+
+    body {
+        background: black url(../imagens/back-phone.jpg) no-repeat;
+        background-size: cover;
+        background-position: center center
+        ;
+    }
+
+    main {
+        background-color: rgba(255, 255, 255, 0.692);
+        width: 90vw;
+        margin: auto;
+        border-radius: 10px;
+        padding: 10px;
+    }
+
+    h1 {
+        color: white;
+        text-shadow: 3px 3px 3px  black;
+        text-align: center;
+        font-size: 2em;
+        margin-top: 20px;
+         
+    }
+
+    img {
+        display: block;
+        margin: auto;
+    }
+
+    #fone {display: block;}
+    #tab {display: none;}
+    #impre {display: none;}
+    #desk {display: none;}
+    #tv {display: none;}
+
