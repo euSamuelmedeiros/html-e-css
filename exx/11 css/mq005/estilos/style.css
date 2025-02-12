@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+
+body, html {
+    background-color: lightgray;
+    
+}
+
+header {
+    background-color: rgb(95, 94, 94);
+}
+
+header > h1 {
+    text-align: center;
+    padding: 10px;
+ 
+  
+}
+
