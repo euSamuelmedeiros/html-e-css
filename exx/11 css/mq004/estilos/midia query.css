@@ -11,6 +11,21 @@ grandes telas: acima de 1920px
 */
 
 @media print { /* impressora */
+* {
+    font-family: 'Courier New', Courier, monospace;
+    color: black;
+
+    }
+
+    main {
+        border: 2px solid black;
+    }
+
+    #fone {display: none;}
+    #tab {display: none;}
+    #impre {display: block;}
+    #desk {display: none;}
+    #tv {display: none;}
 
 }
 
@@ -18,12 +33,18 @@ grandes telas: acima de 1920px
     body {
         background-image: url("../imagens/back-tablet.jpg");
     }
-    
-#fone {display: none;}
+
+    main h1 {
+        color: black;
+        text-shadow: none;
+    }
+
+    #fone {display: none;}
 #tab {display: block;}
 #impre {display: none;}
 #desk {display: none;}
 #tv {display: none;}
+    
 }
 
 
