@@ -1,0 +1,111 @@
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfólio Animado</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #0f172a;
+      color: white;
+      scroll-behavior: smooth;
+    }
+    header {
+      text-align: center;
+      padding: 60px 20px;
+      animation: fadeDown 1s ease forwards;
+    }
+    section {
+      max-width: 800px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+    h1, h2 {
+      font-weight: 600;
+    }
+    .card {
+      background: #1e293b;
+      padding: 20px;
+      border-radius: 16px;
+      margin-bottom: 20px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    }
+    button {
+      background: #2563eb;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition :  0.3s;
+    }
+    button:hover {
+      background: #1d4ed8;
+    }
+    @keyframes fadeDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 1s ease;
+    }
+    .fade-in.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Meu Portfólio</h1>
+    <p>Desenvolvedor Java | Spring Boot | APIs REST</p>
+  </header>
+
+  <section id="sobre" class="fade-in">
+    <h2>Sobre Mim</h2>
+    <p>Sou desenvolvedor Java apaixonado por tecnologia e soluções escaláveis. Tenho experiência com backend, banco de dados e APIs.</p>
+  </section>
+
+  <section id="projetos" class="fade-in">
+    <h2>Projetos</h2>
+    <div class="card">
+      <h3>API de Cadastro</h3>
+      <p>Uma API RESTful feita com Java e Spring Boot para gerenciamento de usuários.</p>
+      <button onclick="window.open('#')">Ver no GitHub</button>
+    </div>
+    <div class="card">
+      <h3>Sistema de Vendas</h3>
+      <p>Aplicação web para controle de vendas e estoque usando Java, Spring e MySQL.</p>
+      <button onclick="window.open('#')">Ver no GitHub</button>
+    </div>
+  </section>
+
+  <section id="contato" class="fade-in">
+    <h2>Contato</h2>
+    <p>Entre em contato: <strong>seuemail@email.com</strong></p>
+    <button onclick="window.location.href='mailto:seuemail@email.com'">Enviar Email</button>
+  </section>
+
+  <script>
+    // Animação de fade-in ao rolar a página
+    const faders = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    faders.forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
